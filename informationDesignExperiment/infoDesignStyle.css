@@ -1,0 +1,134 @@
+/* RMIT Digital Media Studio 2610
+    Information Design Experiment: Style Sheet
+    Student: Elias Morton
+*/
+
+/* Import font: Work Sans is chosen for its geometric clarity and legibility in digital interfaces. */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define custom variables for the 'Late Night Bath' palette. 
+   Using variables ensures a consistent visual language across all interactive elements.
+*/
+:root {
+    --col01: #282d3c; /* Deep background blue */
+    --col02: #f0f6f0; /* Off-white text */
+    --col03: #ffc4b8; /* Peach accent */
+    --col04: #5b5d70; /* Muted border/secondary blue */
+    --col05: #74838c; /* Neutral grey-blue */
+    --col06: #f69197; /* Pink/Red highlight */
+    --border: solid 2px var(--col04);
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--col01);
+    color: var(--col02);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1280px;
+    padding: 0 3rem;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+/* Header styling to provide a clear information hierarchy. */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--col03);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/* CONTROL SECTION STYLING
+    I have utilized Flexbox to manage the alignment of the interactive sliders and icons. 
+    The 'controls' container limits the width to ensure the interface remains 
+    tactile and comfortable on desktop displays.
+*/
+.controls {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* The 'control-group' uses Flexbox to align expressive icons and labels horizontally.
+    The border helps distinguish each 'composite' control as a distinct expressive zone.
+*/
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem;
+    border: var(--border);
+    border-radius: 8px;
+    background-color: rgba(91, 93, 112, 0.2); /* Semi-transparent var(--col04) */
+}
+
+.icon {
+    font-size: 1.8rem;
+    min-width: 2.5rem;
+    text-align: center;
+    user-select: none;
+}
+
+/* CUSTOM RANGE INPUT STYLING
+    I have increased the flex-grow to ensure the slider occupies the maximum available 
+    space, supporting the development of 'technique' through larger movement range.
+*/
+input[type="range"] {
+    flex-grow: 1;
+    cursor: pointer;
+    accent-color: var(--col03); /* Connects the slider thumb to the main accent color */
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: var(--col05);
+    min-width: 130px;
+    text-align: right;
+}
+
+/* Intro modal dialog styling */
+dialog[open] {
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--col02);
+    color: var(--col01);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#dialog-close-button {
+    padding: 0.6rem 1.5rem;
+    background-color: var(--col01);
+    color: var(--col02);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+#dialog-close-button:hover {
+    background-color: var(--col06);
+}

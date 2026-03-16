@@ -1,0 +1,119 @@
+/* RMIT Digital Media 2026 
+    Studio Work Index Main Stylesheet
+    Student: Elias Morton
+*/
+
+:root {
+    --bg-color: #f4f4f9;
+    --text-color: #333;
+    --accent-color: #282d3c; /* Matching your experiment's deep blue */
+    --link-color: #f69197; /* Matching your experiment's accent pink */
+    --max-width: 900px;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.speculation-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.speculation-content h3 {
+    margin: 2rem 0 1rem 0;
+    color: var(--accent-color);
+}
+
+#experiments ul {
+    list-style: none;
+    padding: 0;
+}
+
+#experiments li {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+    #experiments li:hover {
+        transform: translateX(10px);
+    }
+
+#experiments a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 4rem 0;
+}
